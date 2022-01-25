@@ -1,6 +1,8 @@
 import { Box, Divider, Paper } from '@mantine/core';
 import CVExperienceTimeline from '../components/CVExperienceTimeline';
 import CVHeader from '../components/CVHeader';
+import CVBio from '../components/CVBio';
+import CVFooter from '../components/CVFooter';
 
 const Home = () => {
   return (
@@ -14,10 +16,16 @@ const Home = () => {
         padding: '10px',
       })}
     >
-      <Paper padding="md" shadow="xs" sx={{ maxWidth: 720 }}>
+      <Paper
+        padding="md"
+        shadow="xs"
+        sx={{ maxWidth: 720, paddingLeft: '2rem', paddingRight: '2rem' }}
+      >
         <CVHeader />
         <Divider my="sm" />
+        <CVBio />
         <CVExperienceTimeline />
+        <CVFooter />
       </Paper>
     </Box>
   );
