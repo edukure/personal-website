@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 
@@ -18,6 +19,8 @@ export default function App({ Component, pageProps }: AppProps) {
         withNormalizeCSS
         theme={{
           /** Put your mantine theme override here */
+          headings: { fontFamily: 'Poppins, sans-serif' },
+          fontFamily: 'Poppins, sans-serif',
           colorScheme: 'light',
         }}
       >
