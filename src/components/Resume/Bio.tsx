@@ -1,6 +1,6 @@
 import { Box, Highlight, Text } from '@mantine/core';
 
-function CVBio() {
+function Bio() {
   return (
     <Box>
       <Highlight
@@ -39,4 +39,4 @@ function CVBio() {
   );
 }
 
-export default CVBio;
+export default Bio;

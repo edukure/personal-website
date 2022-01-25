@@ -1,8 +1,8 @@
 import { Box } from '@mantine/core';
 
-import CVScreen from 'screens/ResumeScreen';
+import ResumeScreen from 'screens/ResumeScreen';
 
-const Home = () => {
+const ResumePage = () => {
   return (
     <Box
       sx={(theme) => ({
@@ -14,9 +14,9 @@ const Home = () => {
         padding: '10px',
       })}
     >
-      <CVScreen />
+      <ResumeScreen />
     </Box>
   );
 };
 
-export default Home;
+export default ResumePage;

@@ -5,12 +5,13 @@ import {
   Timeline,
   Box,
   Title,
+  List as MantineList,
   ThemeIcon,
 } from '@mantine/core';
-import List from './List';
+
 import { FiGitCommit, FiGitBranch } from 'react-icons/fi';
 
-function CVExperienceTimeline() {
+function ExperienceTimeline() {
   return (
     <Box component={'section'}>
       <Title order={2}>Grupo Alura</Title>
@@ -84,4 +85,42 @@ function CVExperienceTimeline() {
   );
 }
 
-export default CVExperienceTimeline;
+type ListProps = {
+  items: string[];
+};
+
+function List({ items }: ListProps) {
+  return (
+    <MantineList
+      styles={{
+        itemIcon: {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin: '2px',
+        },
+        item: {
+          fontSize: '14px',
+        },
+      }}
+      icon={
+        <ThemeIcon
+          size={18}
+          radius="xl"
+          sx={(theme) => ({
+            backgroundColor: 'transparent',
+            color: theme.colors.teal[8],
+          })}
+        >
+          <FiGitCommit size={18} />
+        </ThemeIcon>
+      }
+    >
+      {items.map((item, index) => (
+        <MantineList.Item key={index}>{item}</MantineList.Item>
+      ))}
+    </MantineList>
+  );
+}
+
+export default ExperienceTimeline;

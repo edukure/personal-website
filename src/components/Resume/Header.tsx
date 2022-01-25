@@ -1,7 +1,7 @@
 import { Avatar, Box, Text, Title } from '@mantine/core';
 import { MdEmail, MdLocationPin } from 'react-icons/md';
 
-function CVHeader() {
+function Header() {
   return (
     <Box
       component="header"
@@ -42,4 +42,4 @@ function CVHeader() {
   );
 }
 
-export default CVHeader;
+export default Header;

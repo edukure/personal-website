@@ -1,7 +1,7 @@
 import { Box, Button } from '@mantine/core';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-function CVFooter() {
+function Footer() {
   return (
     <Box
       component="footer"
@@ -42,4 +42,4 @@ function CVFooter() {
   );
 }
 
-export default CVFooter;
+export default Footer;
