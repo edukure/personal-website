@@ -1,6 +1,6 @@
 import { Box } from '@mantine/core';
 
-import CVScreen from 'screens/ResumeScreen';
+import HomeScreen from 'screens/HomeScreen';
 
 const Home = () => {
   return (
@@ -10,11 +10,12 @@ const Home = () => {
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
-        backgroundColor: theme.colors.gray[2],
+        background: '#363a51',
+        // background: theme.fn.linearGradient(0, '#0b8896', '#5DE4AB'),
         padding: '10px',
       })}
     >
-      <CVScreen />
+      <HomeScreen />
     </Box>
   );
 };

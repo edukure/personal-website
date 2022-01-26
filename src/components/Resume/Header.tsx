@@ -14,7 +14,16 @@ function Header() {
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Avatar size="lg" radius="xl" src="/perfil.jpeg" />
         <Box ml={4} sx={{ padding: '8px' }}>
-          <Title order={1} sx={{ lineHeight: 1.2 }}>
+          <Title
+            order={1}
+            sx={(theme) => ({
+              lineHeight: 1.2,
+              fontSize: '28px',
+              [`@media screen and (min-width: ${theme.breakpoints.sm}px)`]: {
+                fontSize: '34px',
+              },
+            })}
+          >
             Eduardo Tioma
           </Title>
           <Text color="dimmed" size="sm" sx={{ lineHeight: 0.8 }}>

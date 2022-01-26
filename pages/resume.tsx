@@ -32,7 +32,7 @@ const ResumePage = ({ isPuppeteer }: ResumePageProps) => {
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
-        backgroundColor: theme.colors.gray[2],
+        backgroundColor: isPuppeteer ? theme.colors.gray[2] : '#363a51',
         padding: `${isPuppeteer ? '16px' : '32px'} 10px`,
       })}
     >
