@@ -15,12 +15,20 @@ async function getOptions() {
     darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   };
 
-  const exePath = chromeExecPaths[process.platform];
+  // make ts happy (:
+  if (
+    process.platform !== 'win32' &&
+    process.platform !== 'linux' &&
+    process.platform !== 'darwin'
+  )
+    throw new Error(`current platform (${process.platform}) not supported`);
+
+  const execPath = chromeExecPaths[process.platform];
 
   if (isDev) {
     options = {
       args: [],
-      executablePath: exePath,
+      executablePath: execPath,
       headless: true,
     };
   } else {
